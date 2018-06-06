@@ -47,8 +47,7 @@ public class MainPageActions {
 
         if (loginField.getValue().equals(login) && passwordField.getValue().equals(password)) {
             result = true;
-            SelenideElement submitButton = we.waitElement(mpg.submitButtonControl());
-            submitButton.click();
+            we.waitElement(mpg.submitButtonControl()).click();
         }
         return result;
     }

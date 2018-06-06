@@ -2,14 +2,13 @@ package controls;
 
 import com.codeborne.selenide.SelenideElement;
 
-import static com.codeborne.selenide.Selectors.byAttribute;
-import static com.codeborne.selenide.Selectors.byId;
+import static com.codeborne.selenide.Selectors.*;
 import static com.codeborne.selenide.Selenide.$;
 
 public class MailBoxPageControls {
 
     public SelenideElement messageWriteButtonControl() {
-        return $(byAttribute("data-title", "Написать письмо (N)"));
+        return $(byXpath("//*[@id=\"b-toolbar__left\"]/div/div/div[2]/div"));
     }
 
     public SelenideElement portalMenuControl() {
@@ -29,6 +28,6 @@ public class MailBoxPageControls {
     }
 
     public SelenideElement sendMessageButtonControl() {
-        return $(byAttribute("data-title", "Отправить (Ctrl+Enter)"));
+        return $(byXpath("//*[@id=\"b-toolbar__right\"]/div[3]/div/div[2]/div[1]/div"));
     }
 }

@@ -20,11 +20,15 @@ public class ConfigLoader {
         return getProperty("password");
     }
 
+    public String getBrowser() {
+        return getProperty("browser");
+    }
+
     private String getProperty(String name) {
         String result = "";
         FileInputStream fis;
         Properties property = new Properties();
-        String propertyFile = "src\\test\\resources\\application.properties";
+        String propertyFile = "src/test/resources/application.properties";
 
         try {
             fis = new FileInputStream(propertyFile);
